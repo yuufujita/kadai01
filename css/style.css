@@ -1,0 +1,384 @@
+/* ここから下に記載していく */
+@charset "UTF-8";
+
+/* 共通部分
+---------------------------- */
+html {
+  font-size: 100%;
+}
+body {
+  font-family: "Yu Gothic Medium", "游ゴシック Medium", "YuGothic",
+    "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
+  line-height: 1.7;
+  color: #222222;
+}
+a {
+  text-decoration: none;
+}
+p {
+  line-height: 1.5;
+}
+img {
+  max-width: 100%;
+}
+.wrapper {
+  max-width: 1200px;
+  text-align: center;
+}
+
+/* ヘッダー
+---------------------------- */
+#home {
+  height: 150px;
+}
+.logo {
+  margin: 30px 20px;
+  max-height: 100%;
+}
+.main-nav {
+  display: flex;
+  font-size: 21px;
+  margin: 50px;
+  list-style: none;
+}
+.main-nav a {
+  color: #222222;
+}
+.main-nav li {
+  margin-left: 50px;
+}
+.main-nav a:hover {
+  color: #0bd;
+}
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  height: 125px;
+}
+
+/* ボタン　*/
+.button {
+  font-size: 18px;
+  background: #ffd61a;
+  color: #fff;
+  padding: 21px 120px;
+}
+.button:hover {
+  background: #0090aa;
+}
+.button:disabled {
+  background: #ccc;
+}
+
+/* メインビジュアル（世界を変えるチーズを作ろう、How about a drink?）
+---------------------------- */
+#main {
+  background-image: url(../img/mainbg.png);
+  /* width: 100%; */
+  height: 250px;
+  color: #fff;
+  position: relative;
+  min-width: 100vw;
+  background-size: cover;
+}
+#drinking-party {
+  background-image: url(../img/drink_00.jpg), linear-gradient(white, #97cdf3);
+  /* width: 100%; */
+  background-color: #e6f0f0;
+  background-blend-mode: hard-light;
+  height: 250px;
+  color: black;
+  position: relative;
+  min-width: 100vw;
+  background-size: cover;
+}
+.main-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.main-title {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+.main-content p {
+  font-size: 18px;
+}
+
+/* コンテンツ共通
+---------------------------- */
+.contents {
+  padding-top: 60px;
+}
+.title {
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+.sub-title {
+  margin-bottom: 60px;
+}
+
+/* ABOUT（チーズアカデミーについて）
+---------------------------- */
+#about .title {
+  color: #ffd61a;
+}
+.about-container {
+  display: flex;
+  margin-top: 80px;
+  overflow: hidden;
+}
+.about-item {
+  display: flex;
+  animation: loop-list 5s linear infinite;
+}
+.about-img {
+  width: calc(100vw / 4);
+  display: block;
+}
+.about-img img {
+  width: 100%;
+}
+@keyframes loop-list {
+  0% {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+.about-container:hover .about-item {
+  animation-play-state: paused;
+}
+/*
+ @keyframes loop { 
+  0% {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes loop2 {
+  0% {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-200%);
+  }
+}
+.about-container ul:first-child {
+  animation: loop 50s -25s linear infinite;
+}
+.about-container ul:last-child {
+  animation: loop2 50s linear infinite;
+}
+*/
+.bottom40 {
+  margin-bottom: 40px;
+}
+
+/* COURSE
+---------------------------- */
+.course-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  background-color: #fafafa;
+}
+.course-item img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.course-text {
+  align-self: center;
+  text-align: left;
+}
+.course-text-right {
+  justify-self: start;
+  padding-left: 50px;
+}
+.course-text-left {
+  justify-self: end;
+  padding-right: 50px;
+}
+.course-title {
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+/* NEWS（ニュース）
+---------------------------- */
+#news {
+  padding-bottom: 60px;
+}
+#news .title {
+  color: #ffd61a;
+}
+.news-container {
+  /*
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom: 60px;
+  justify-items: center;
+  */
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+.news-item {
+  width: 300px;
+  text-align: left;
+  margin: 0 15px;
+}
+.news-item:hover {
+  border: solid 5px red;
+}
+.news-img {
+  width: 300px;
+  height: 200px;
+}
+.news-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.news-title {
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 24px;
+}
+
+/* ACCESS（会社情報）
+---------------------------- */
+#access {
+  padding-bottom: 60px;
+  background-color: #fafafa;
+}
+#access table {
+  margin: auto;
+  margin-top: 60px;
+}
+#access td {
+  text-align: left;
+  height: 50px;
+}
+#access .right {
+  padding-left: 50px;
+}
+.access-title {
+  padding-bottom: 30px;
+}
+
+/* CONTACT（会社情報）
+---------------------------- */
+#contact {
+  margin-bottom: 140px;
+}
+.bottom30 {
+  margin-bottom: 30px;
+}
+.bottom70 {
+  margin-bottom: 70px;
+}
+#contact table {
+  margin: auto;
+  margin-bottom: 30px;
+  text-align: left;
+}
+#contact td {
+  padding: 8px 64px 8px 16px;
+  border-top: 1px solid #bfbfbf;
+  border-bottom: 1px solid #bfbfbf;
+}
+#contact .left {
+  border-right: 1px solid #bfbfbf;
+}
+#contact label {
+  width: 240px;
+}
+input[type="text"],
+input[type="email"],
+select {
+  width: 400px;
+  height: 20px;
+}
+#contact form div {
+  margin-bottom: 24px;
+}
+/*
+.select-item {
+  height: 20px;
+}
+*/
+.selection-aid {
+  height: 20px;
+}
+.selection-aid:hover {
+  border: dotted 2px red;
+}
+#contact .button {
+  border: none;
+  width: 300px;
+}
+/*
+input[type="checkbox"] {
+  margin-bottom: 24px;
+}
+*/
+textarea {
+  vertical-align: top;
+  width: 400px;
+  height: 100px;
+}
+
+/* MAP
+---------------------------- */
+#map {
+  margin-top: 0px;
+  margin-bottom: 30px;
+  width: 100vw;
+  padding-top: 1.5%;
+}
+#map a {
+  background-color: pink;
+}
+.map-container {
+  display: grid;
+  gap: 1px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  padding: 15px 35%;
+}
+.map-item {
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.map-item img {
+  height: 100%;
+  width: 100%;
+}
+#output {
+  font-size: 25px;
+  font-weight: bold;
+}
+.map-item :hover {
+  transform: scale(1.2, 1.2);
+}
+
+/* フッター
+---------------------------- */
+footer {
+  background: #707070;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+footer p {
+  color: #fff;
+  font-size: 0.875rem;
+}

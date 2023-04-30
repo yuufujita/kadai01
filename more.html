@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <!-- 最初の設定は終わっています　必要な方は触ってください -->
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>チーズアカデミー</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <!-- 最初の設定は終わっています　必要な方は触ってください -->
+
+  <body>
+    <!-- この中に記述していく -->
+    <!-- ここから下にコードを書く -->
+    <div id="home" class="big-bg">
+      <header class="page-header wrapper">
+        <a href="index.html"
+          ><img
+            class="logo"
+            src="img/header_logo.png"
+            alt="チーズアカデミーホーム"
+        /></a>
+        <nav>
+          <ul class="main-nav">
+            <li><a href="index.html#about">ABOUT</a></li>
+            <li><a href="index.html#course">COURSE</a></li>
+            <li><a href="index.html#news">NEWS</a></li>
+            <li><a href="index.html#access">ACCESS</a></li>
+            <li><a href="index.html#contact">CONTACT</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+
+    <div class="wrapper">
+      <article>
+        <div id="drinking-party">
+          <div class="main-content">
+            <h1 class="main-title">How about a drink?</h1>
+            <p>チーズやプログラミングに疲れたらとりあえず飲みましょう</p>
+          </div>
+        </div>
+        <div id="map" class="contents">
+          <h2 class="title">MAP</h2>
+          <p class="map-sub-title">
+            チーズアカデミーから徒歩で行けて、土曜日も営業しているお店です。
+          </p>
+          <p id="output">地図をクリックするとここにお店が表示</p>
+          <div class="map-container">
+            <div class="map-item">
+              <img src="img/map_01.jpg" alt="地図01" id="map_01" />
+            </div>
+            <div class="map-item">
+              <img src="img/map_02.jpg" alt="地図02" id="map_02" />
+            </div>
+            <div class="map-item">
+              <img src="img/map_03.jpg" alt="地図03" id="map_03" />
+            </div>
+            <div class="map-item">
+              <img src="img/map_04.jpg" alt="地図04" id="map_04" />
+            </div>
+            <div class="map-item">
+              <img src="img/map_05.jpg" alt="地図05" id="map_05" />
+            </div>
+            <div class="map-item">
+              <img src="img/map_06.jpg" alt="地図06" id="map_06" />
+            </div>
+            <div class="map-item">
+              <img src="img/map_07.jpg" alt="地図07" id="map_07" />
+            </div>
+            <div class="map-item">
+              <img src="img/map_08.jpg" alt="地図08" id="map_08" />
+            </div>
+            <div class="map-item">
+              <img src="img/map_09.jpg" alt="地図09" id="map_09" />
+            </div>
+          </div>
+          <script language="javascript" type="text/javascript">
+            const items = document.querySelectorAll(".map-item");
+            //console.log(items);
+
+            for (let i = 0; i < items.length; i++) {
+              const keyframes = {
+                opacity: [0, 1],
+              };
+              const options = {
+                duration: 2700,
+                delay: i * 300,
+                fill: "forwards",
+              };
+              items[i].animate(keyframes, options);
+            }
+            document.getElementById("map_01").onclick = function () {
+              //console.log("オッケー01");
+              document.getElementById("output").innerHTML =
+                "<p>権八 NORI-TEMAKI 原宿 様 050-5443-1033　<a href=https://tabelog.com/tokyo/A1306/A130601/13221143/>食べログへのリンクはここをクリック</a><br>原宿ダッチ パスタラボ 様 03-6455-5210　<a href=https://tabelog.com/tokyo/A1306/A130601/13187696/>食べログへのリンクはここをクリック</a></p>";
+            };
+            document.getElementById("map_02").onclick = function () {
+              document.getElementById("output").innerHTML =
+                "<p>さつまやとんとん 原宿 様 050-5869-3619　<a href=https://tabelog.com/tokyo/A1306/A130601/13017595/>食べログへのリンクはここをクリック</a><br>やさい家めい 表参道ヒルズ本家 樣 050-5600-3212　<a href=https://tabelog.com/tokyo/A1306/A130602/13021167/>食べログへのリンクはここをクリック</a></p>";
+            };
+            document.getElementById("map_03").onclick = function () {
+              document.getElementById("output").innerHTML =
+                "<p>居酒屋 源喜 和Dining 様 050-5457-2526　<a href=https://tabelog.com/tokyo/A1306/A130602/13249750/>食べログへのリンクはここをクリック</a></p>";
+            };
+            document.getElementById("map_04").onclick = function () {
+              document.getElementById("output").innerHTML =
+                "<p>ザ グレートバーガー 様 03-3406-1215　<a href=https://tabelog.com/tokyo/A1306/A130601/13042654/>食べログへのリンクはここをクリック</a></p>";
+            };
+            document.getElementById("map_05").onclick = function () {
+              document.getElementById("output").innerHTML =
+                "<p>こころ 様 03-6427-1336　<a href=https://tabelog.com/tokyo/A1306/A130601/13149253/>食べログへのリンクはここをクリック</a></p>";
+            };
+            document.getElementById("map_06").onclick = function () {
+              document.getElementById("output").innerHTML =
+                "<p>おもてなしとりよし 青山店 様 050-3033-9652　<a href=https://tabelog.com/tokyo/A1306/A130602/13219771/>食べログへのリンクはここをクリック</a></p>";
+            };
+            document.getElementById("map_07").onclick = function () {
+              document.getElementById("output").innerHTML =
+                "<p>VALLEY PARK STAND 様 050-5597-9324　<a href=https://tabelog.com/tokyo/A1303/A130301/13248192/>食べログへのリンクはここをクリック</a></p>";
+            };
+            document.getElementById("map_08").onclick = function () {
+              document.getElementById("output").innerHTML =
+                "<p>ほの字 青山店 様 050-5570-5839　<a href=https://tabelog.com/tokyo/A1306/A130602/13014215/>食べログへのリンクはここをクリック</a><br>野趣家 様 050-5890-5097　<a href=https://tabelog.com/tokyo/A1306/A130602/13035109/>食べログへのリンクはここをクリック</a></p>";
+            };
+            document.getElementById("map_09").onclick = function () {
+              document.getElementById("output").innerHTML =
+                "<p>寅福 青山本店 様 03-5766-2800　<a href=https://tabelog.com/tokyo/A1306/A130602/13005248/>食べログへのリンクはここをクリック</a></p>";
+            };
+          </script>
+        </div>
+      </article>
+    </div>
+    <footer>
+      <div class="wrapper">
+        <p>
+          <small
+            >&copy; copyrights 2016 Cheeese Academy Tokyo All RIghts
+            Reserved.</small
+          >
+        </p>
+      </div>
+    </footer>
+    <!-- ここから上にコードを書く -->
+    <!-- この中に記述していく -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
